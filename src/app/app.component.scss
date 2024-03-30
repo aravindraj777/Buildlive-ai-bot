@@ -1,0 +1,188 @@
+// // Variables
+// $primary-color: #333;
+// $secondary-color: #555;
+// $background-color: #f0f0f0;
+// $text-color: #fff; // White text color
+
+// // Styles for chat container
+// .chat-container {
+//   max-width: 450px; // Adjust as needed for a larger size
+//   width: 90%; // Adjust as needed for responsiveness
+//   margin: 50px auto; // Centered and larger margin
+//   border: 1px solid $secondary-color;
+//   border-radius: 15px;
+//   overflow: hidden;
+//   background: linear-gradient(to bottom, #555, #333); // Gradient background
+
+//   // Additional shadow for depth
+//   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+// }
+
+// // Styles for chat header
+// .chat-header {
+//   background-color: transparent; // Transparent header
+//   padding: 15px; // Larger padding
+//   text-align: center;
+
+//   h4 {
+//     margin: 0;
+//     color: $text-color;
+//     font-size: 1.8rem; // Larger font size
+//   }
+// }
+
+// // Styles for chat history
+// .chat-history {
+//   padding: 15px; // Larger padding
+//   background-color: transparent; // Transparent background
+//   height: 300px; // Adjust as needed
+//   overflow-y: scroll;
+// }
+
+// // Styles for chat input
+// .chat-input {
+//   display: flex;
+//   align-items: center;
+//   padding: 15px; // Larger padding
+//   background-color: transparent; // Transparent background
+
+//   input[type="text"] {
+//     flex: 1;
+//     padding: 10px; // Larger padding
+//     border: 1px solid $primary-color; // Darker border
+//     border-radius: 8px; // Rounded border
+//     background-color: rgba(255, 255, 255, 0.1); // Semi-transparent background
+//     color: $text-color;
+//   }
+
+//   button {
+//     padding: 10px 20px; // Larger padding
+//     margin-left: 10px;
+//     background-color: rgba(255, 255, 255, 0.1); // Semi-transparent background
+//     color: $text-color;
+//     border: none;
+//     border-radius: 8px; // Rounded border
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+
+//     &:hover {
+//       background-color: rgba(255, 255, 255, 0.2); // Lighter semi-transparent background on hover
+//     }
+//   }
+// }
+
+
+
+// Variables
+$primary-color: #4a90e2; // Lighter blue color
+$secondary-color: #2a4c85; // Darker blue color
+$background-color: #f0f0f0;
+$text-color: #333;
+
+// Styles for chat container
+.chat-container {
+  max-width: 600px; // Adjust as needed for a larger size
+  width: 90%; // Adjust as needed for responsiveness
+  margin: 50px auto; // Centered and larger margin
+  border: 1px solid $secondary-color;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, $primary-color, $secondary-color); // Gradient background
+
+  // Additional shadow for depth
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+// Styles for chat header
+.chat-header {
+  background-color: transparent; // Transparent header
+  padding: 20px; // Larger padding
+  text-align: center;
+
+  h4 {
+    margin: 0;
+    color: $text-color;
+    font-size: 2rem; // Larger font size
+  }
+}
+
+// Styles for chat history
+.chat-history {
+  padding: 20px; // Larger padding
+  background-color: transparent; // Transparent background
+  height: 400px; // Adjust as needed
+  overflow-y: scroll;
+
+  // Style for messages
+  .message-container {
+    display: flex;
+    margin-bottom: 15px;
+
+    // User question alignment to the left
+    &.user {
+      justify-content: flex-start;
+
+      .message {
+        background-color: #fff; // White background
+        color: $text-color;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); // Shadow for depth
+      }
+    }
+
+    // Bot response alignment to the right
+    &.bot {
+      justify-content: flex-end;
+
+      .message {
+        background-color: #f0f0f0; // Light background
+        color: $text-color;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); // Shadow for depth
+      }
+    }
+
+    // Message styles
+    .message {
+      padding: 15px; // Larger padding
+      max-width: 70%;
+      word-wrap: break-word;
+    }
+  }
+}
+
+// Styles for chat input
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 20px; // Larger padding
+  background-color: transparent; // Transparent background
+
+  input[type="text"] {
+    flex: 1;
+    padding: 15px; // Larger padding
+    border: 1px solid $primary-color; // Blue border
+    border-radius: 20px; // Rounded border
+    background-color: #fff; // White background
+    color: $text-color;
+  }
+
+  button {
+    padding: 15px 25px; // Larger padding
+    margin-left: 20px;
+    background-color: $primary-color; // Blue background
+    color: #fff; // White text
+    border: none;
+    border-radius: 20px; // Rounded border
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Darker blue on hover
+    }
+  }
+}
+
+
